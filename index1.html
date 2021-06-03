@@ -1,0 +1,79 @@
+
+ <!DOCTYPE html>
+ <head>
+     <title>Fetch APIs</title>
+ </head>
+ <body>
+     <h2 id="getText">Get Text</h2>
+ </body>
+
+ <script>
+function topArticles(username, limit) {
+    console.log('hello?')
+    // let title = document.getElementById('getText').value;
+    fetch('sample.txt', {
+        method: 'POST',
+        headers: {
+            'Accept' : 'application/json',
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify({title:title})
+        
+    })
+        .then((response) => response.json())
+        console.log(response)
+        .then((data) => console.log(data)
+        );
+
+      
+}  
+
+    console.log('h')
+    //import reqeust and json
+
+    //set variable
+    // username = [];
+    // limit = 1;
+    
+    // totalPages = 1;
+   
+
+    // while limit <= totalPages {
+    // make request for each page
+
+
+    //set totalPages value
+
+
+    // get data for each user
+
+    // check if submission coumnt is greater than threasdhol
+
+    /// return usernames
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

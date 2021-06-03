@@ -3,13 +3,14 @@
     <title>Fetch APIs</title>
 </head>
 <body>
-    <button id="getText">Get Text</button>
+    <button id="getText">Get APIs</button>
 </body>
 
 <script>
     document.getElementById('getText').addEventListener('click', getText);
 
-    function getText(){
+    function getText(e){
+        e.preventDefault();
     //   fetch('sample.txt')
     //     .then(function(res){
     //         return res.text();
@@ -18,8 +19,13 @@
     //         console.log(data);
     //     })
 
-    fetch('sample.txt')
-    .then((res) => res.text())
+    fetch('https://jsonmock.hackerrank.com/api/articles?author=olalonde&page=1', {
+        method: 'GET',
+        headers: {
+            'Accept' : 'application/json'
+        }
+    })
+    .then((res) => res.json())
     .then((data) => console.log(data));
     }
 </script>
